@@ -1,6 +1,7 @@
 var http    = require('http');
 var express = require('express');
-var port    = process.argv[2] || 3000;
+var process = require('process');
+var port    = process.env.PORT || 3000;
 var app     = express();
 
 http.createServer( app ).listen( port );
